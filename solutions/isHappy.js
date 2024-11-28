@@ -6,6 +6,7 @@ A happy number is a number defined by the following process:
 - Those numbers for which this process ends in 1 are happy.
 Return true if n is a happy number, and false if not.
 */
+
 function sumOfSquares(n) {
   let sum = 0;
   while (n > 0) {

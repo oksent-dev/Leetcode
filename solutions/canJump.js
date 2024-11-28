@@ -4,15 +4,16 @@ and each element in the array represents your maximum jump length at that positi
 
 Return true if you can reach the last index, or false otherwise.
 */
+
 /**
  * @param {number[]} nums
  * @return {boolean}
  */
-var canJump = function(nums) {
-    let max = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (i > max) return false;
-        max = Math.max(max, i + nums[i]);
-    }
-    return true;
+var canJump = function (nums) {
+  let max = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (i > max) return false;
+    max = Math.max(max, i + nums[i]);
+  }
+  return true;
 };

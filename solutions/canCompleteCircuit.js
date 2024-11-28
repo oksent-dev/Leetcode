@@ -14,22 +14,22 @@ otherwise return -1. If there exists a solution, it is guaranteed to be unique
  * @param {number[]} cost
  * @return {number}
  */
-var canCompleteCircuit = function(gas, cost) {
-    let totalGas = 0;
-    let totalCost = 0;
-    let tankAmount = 0;
-    let startIdx = 0;
-    for (let i = 0; i < gas.length; i++) {
-        totalGas += gas[i];
-        totalCost += cost[i];
-        tankAmount += gas[i] - cost[i];
-        if (tankAmount < 0) {
-            startIdx = i + 1;
-            tankAmount = 0;
-        }
+var canCompleteCircuit = function (gas, cost) {
+  let totalGas = 0;
+  let totalCost = 0;
+  let tankAmount = 0;
+  let startIdx = 0;
+  for (let i = 0; i < gas.length; i++) {
+    totalGas += gas[i];
+    totalCost += cost[i];
+    tankAmount += gas[i] - cost[i];
+    if (tankAmount < 0) {
+      startIdx = i + 1;
+      tankAmount = 0;
     }
-    return totalGas >= totalCost ? startIdx : -1;
+  }
+  return totalGas >= totalCost ? startIdx : -1;
 };
 
 // test cases:
-console.log(canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2])); // 3
+console.log(canCompleteCircuit([1, 2, 3, 4, 5], [3, 4, 5, 1, 2])); // 3

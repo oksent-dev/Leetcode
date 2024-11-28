@@ -11,6 +11,7 @@ Each range [a,b] in the list should be output as:
 "a->b" if a != b
 "a" if a == b
 */
+
 /**
  * @param {number[]} nums
  * @return {string[]}

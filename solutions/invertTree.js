@@ -1,6 +1,7 @@
 /*
 Given the root of a binary tree, invert the tree, and return its root.
 */
+
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -9,6 +10,7 @@ Given the root of a binary tree, invert the tree, and return its root.
  *     this.right = (right===undefined ? null : right)
  * }
  */
+
 /**
  * @param {TreeNode} root
  * @return {TreeNode}
@@ -22,7 +24,7 @@ var invertTree = function (root) {
 };
 
 // Test case
-import TreeNode from "./utils/treeNode.js";
+import TreeNode from "../utils/treeNode.js";
 const tree = new TreeNode(
   4,
   new TreeNode(2, new TreeNode(1), new TreeNode(3)),
