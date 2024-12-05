@@ -56,3 +56,29 @@ var fullJustify = function (words, maxWidth) {
 
 // test cases
 console.log(fullJustify(["This", "is", "an", "example", "of", "text", "justification."], 16));
+console.log(fullJustify(["What", "must", "be", "acknowledgment", "shall", "be"], 16));
+console.log(
+  fullJustify(
+    [
+      "Science",
+      "is",
+      "what",
+      "we",
+      "understand",
+      "well",
+      "enough",
+      "to",
+      "explain",
+      "to",
+      "a",
+      "computer.",
+      "Art",
+      "is",
+      "everything",
+      "else",
+      "we",
+      "do",
+    ],
+    20
+  )
+);
