@@ -1,1 +1,1 @@
-# Leetcode elegant solutions using Javascript
+# Leetcode elegant solutions
