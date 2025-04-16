@@ -54,7 +54,10 @@ var reverseKGroup = function (head, k) {
 };
 
 // Test Cases
-import ListNode from "../utils/listNode.js";
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
 var head = new ListNode(1);
 head.next = new ListNode(2);
 head.next.next = new ListNode(3);

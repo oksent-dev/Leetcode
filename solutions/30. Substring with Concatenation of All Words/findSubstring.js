@@ -54,5 +54,5 @@ var findSubstring = function (s, words) {
   return result;
 };
 
-// test case:
+// Test cases:
 console.log(findSubstring("barfoothefoobarman", ["foo", "bar"])); // [0,9]

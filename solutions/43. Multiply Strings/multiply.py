@@ -1,5 +1,5 @@
 """
-Given two non-negative integers num1 and num2 represented as strings, 
+Given two non-negative integers num1 and num2 represented as strings,
 return the product of num1 and num2, also represented as a string.
 Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
 """
@@ -25,7 +25,9 @@ class Solution:
 
 
 # Test cases
-s = Solution()
-print(s.multiply("2", "3"))  # "6"
-print(s.multiply("123", "456"))  # "56088"
-print(s.multiply("0", "123"))  # "0"
+if __name__ == "__main__":
+    s = Solution()
+
+    print(s.multiply("2", "3"))  # "6"
+    print(s.multiply("123", "456"))  # "56088"
+    print(s.multiply("0", "123"))  # "0"

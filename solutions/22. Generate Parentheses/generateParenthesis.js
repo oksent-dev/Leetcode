@@ -19,3 +19,7 @@ var generateParenthesis = function (n) {
   backtrack(0, 0, "");
   return result;
 };
+
+// Test cases
+console.log(generateParenthesis(3)); // ["((()))","(()())","(())()","()(())","()()()"]
+console.log(generateParenthesis(1)); // ["()"]

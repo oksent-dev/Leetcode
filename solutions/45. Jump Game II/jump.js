@@ -27,5 +27,5 @@ var jump = function (nums) {
   return jumps;
 };
 
-// test cases
+// Test cases
 console.log(jump([2, 3, 1, 1, 4])); // 2
