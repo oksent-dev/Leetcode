@@ -28,7 +28,10 @@ var deleteDuplicates = function (head) {
 };
 
 // Test cases
-import ListNode from "../utils/ListNode.js";
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
 
 const head = new ListNode(1);
 head.next = new ListNode(1);
