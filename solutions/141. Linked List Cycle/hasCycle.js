@@ -32,7 +32,7 @@ var hasCycle = function (head) {
 };
 
 // Test cases
-import ListNode from "../utils/listNode.js";
+import ListNode from "../../utils/listNode.js";
 
 let node1 = new ListNode(3);
 let node2 = new ListNode(2);

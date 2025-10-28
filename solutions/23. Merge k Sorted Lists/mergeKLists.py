@@ -55,4 +55,4 @@ lists = [list1, list2, list3]
 solution = Solution()
 merged_head = solution.mergeKLists(lists)
 print("Merged list:")
-print_list(merged_head)
+print_list(merged_head)  # 1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6 -> None

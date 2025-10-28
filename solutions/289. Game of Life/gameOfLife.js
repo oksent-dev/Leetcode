@@ -33,7 +33,7 @@ var gameOfLife = function (board) {
     [0, 1],
     [1, -1],
     [1, 0],
-    [1, 1]
+    [1, 1],
   ];
 
   for (let i = 0; i < rows; i++) {
@@ -66,14 +66,14 @@ let board = [
   [0, 1, 0],
   [0, 0, 1],
   [1, 1, 1],
-  [0, 0, 0]
+  [0, 0, 0],
 ];
 gameOfLife(board);
 console.log(board); // [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
 
 board = [
   [1, 1],
-  [1, 0]
+  [1, 0],
 ];
 gameOfLife(board);
 console.log(board); // [[1,1],[1,1]]

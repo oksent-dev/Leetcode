@@ -27,7 +27,7 @@ var isSymmetric = function (root) {
 };
 
 // Test cases
-import TreeNode from "../utils/treeNode.js";
+import TreeNode from "../../utils/treeNode.js";
 
 let root = new TreeNode(1);
 root.left = new TreeNode(2);

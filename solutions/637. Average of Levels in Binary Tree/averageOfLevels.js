@@ -33,7 +33,7 @@ var averageOfLevels = function (root) {
 };
 
 // Test cases
-import TreeNode from "../utils/treeNode.js";
+import TreeNode from "../../utils/treeNode.js";
 let root = new TreeNode(3);
 root.left = new TreeNode(9);
 root.right = new TreeNode(20);

@@ -41,7 +41,7 @@ var flatten = function (root) {
 };
 
 // Test Cases
-import TreeNode from "../utils/treeNode.js";
+import TreeNode from "../../utils/treeNode.js";
 var tree = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(5, null, new TreeNode(6)));
 flatten(tree); // 1 -> 2 -> 3 -> 4 -> 5 -> 6
 while (tree !== null) {
