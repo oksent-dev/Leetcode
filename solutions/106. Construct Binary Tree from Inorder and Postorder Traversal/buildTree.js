@@ -28,7 +28,7 @@ var buildTree = function (inorder, postorder) {
 };
 
 // Test Cases
-import TreeNode from "../utils/treeNode.js";
+import TreeNode from "../../utils/treeNode.js";
 function inOrderTraversal(root) {
   if (root === null) return;
 

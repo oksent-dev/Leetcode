@@ -32,7 +32,7 @@ var buildTree = function (preorder, inorder) {
 };
 
 // Test cases
-import TreeNode from "../utils/treeNode.js";
+import TreeNode from "../../utils/treeNode.js";
 function inOrder(root) {
   const arr = [];
   function traverse(node) {
