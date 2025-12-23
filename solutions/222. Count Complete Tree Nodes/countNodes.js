@@ -6,14 +6,13 @@ and all nodes in the last level are as far left as possible. It can have between
 
 Design an algorithm that runs in less than O(n) time complexity.
 */
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
+
+function TreeNode(val, left, right) {
+  this.val = val === undefined ? 0 : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? null : right;
+}
+
 /**
  * @param {TreeNode} root
  * @return {number}
@@ -43,7 +42,6 @@ var countNodes = function (root) {
 };
 
 // Test Cases
-import TreeNode from "../utils/treeNode.js";
 var tree = new TreeNode(1);
 tree.left = new TreeNode(2);
 tree.right = new TreeNode(3);

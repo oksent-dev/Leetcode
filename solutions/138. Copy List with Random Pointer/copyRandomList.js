@@ -13,15 +13,13 @@ The linked list is represented in the input/output as a list of n nodes. Each no
 val: an integer representing Node.val
 random_index: the index of the node (range from 0 to n-1) that the random pointer points to, or null if it does not point to any node.
 Your code will only be given the head of the original linked list.
-/*
-/**
- * // Definition for a _Node.
- * function _Node(val, next, random) {
- *    this.val = val;
- *    this.next = next;
- *    this.random = random;
- * };
- */
+*/
+
+function _Node(val, next = null, random = null) {
+  this.val = val;
+  this.next = next;
+  this.random = random;
+}
 
 /**
  * @param {_Node} head
@@ -45,7 +43,6 @@ var copyRandomList = function (head) {
 };
 
 // Test cases
-import _Node from "../utils/_Node.js";
 const head = new _Node(7);
 head.next = new _Node(13);
 head.next.random = head;
@@ -56,4 +53,4 @@ head.next.next.next.random = head.next.next;
 head.next.next.next.next = new _Node(1);
 head.next.next.next.next.random = head;
 head.random = null;
-console.log(copyRandomList(head)); // Expected: [7, null] -> [13, 0] -> [11, 1] -> [10, 2] -> [1, 0]
+console.log(copyRandomList(head)); // [7, null] -> [13, 0] -> [11, 1] -> [10, 2] -> [1, 0]
