@@ -45,12 +45,12 @@ if __name__ == "__main__":
 
     nums1 = [4, 5, 6, 7, 0, 1, 2]
     target1 = 0
-    print(solution.search(nums1, target1))  # 4
+    print(solution.search(nums1, target1))  # Output: 4
 
     nums2 = [4, 5, 6, 7, 0, 1, 2]
     target2 = 3
-    print(solution.search(nums2, target2))  # -1
+    print(solution.search(nums2, target2))  # Output: -1
 
     nums3 = [1]
     target3 = 0
-    print(solution.search(nums3, target3))  # -1
+    print(solution.search(nums3, target3))  # Output: -1
