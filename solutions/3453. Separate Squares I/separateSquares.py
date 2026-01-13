@@ -15,44 +15,61 @@ from typing import List
 
 class Solution:
     def separateSquares(self, squares: List[List[int]]) -> float:
-        # Collect all critical y-coordinates
-        y_coords = set()
+        from collections import defaultdict
+
+        # Create events and calculate total area
+        events = []
         total_area = 0
 
         for x, y, l in squares:
-            y_coords.add(y)  # Bottom of square
-            y_coords.add(y + l)  # Top of square
+            events.append((y, 0, l))  # 0 = square starts (bottom edge)
+            events.append((y + l, 1, l))  # 1 = square ends (top edge)
             total_area += l * l
 
-        y_coords = sorted(y_coords)
+        if not events:
+            return 0.0
+
+        events.sort()
         half_area = total_area / 2
+
+        # Sweep line through y-coordinates
+        active_widths = defaultdict(int)
         accumulated_area = 0
+        prev_y = events[0][0]
+        i = 0
 
-        # Process each band between consecutive y-coordinates
-        for i in range(len(y_coords) - 1):
-            y_bottom = y_coords[i]
-            y_top = y_coords[i + 1]
-            band_height = y_top - y_bottom
+        while i < len(events):
+            curr_y = events[i][0]
 
-            # Calculate total width of active squares in this band
-            active_width = 0
-            for x, y, l in squares:
-                # Check if this square overlaps with the band [y_bottom, y_top)
-                if y < y_top and y + l > y_bottom:
-                    active_width += l
+            # Process band from prev_y to curr_y with current active widths
+            if prev_y < curr_y and active_widths:
+                band_height = curr_y - prev_y
+                total_width = sum(
+                    width * count for width, count in active_widths.items()
+                )
+                band_area = total_width * band_height
 
-            band_area = active_width * band_height
+                if accumulated_area + band_area >= half_area:
+                    remaining_area = half_area - accumulated_area
+                    line_height = remaining_area / total_width
+                    return float(prev_y + line_height)
 
-            # Check if the line falls within this band
-            if accumulated_area + band_area >= half_area:
-                # Interpolate to find exact position within the band
-                remaining_area = half_area - accumulated_area
-                line_height = remaining_area / active_width if active_width > 0 else 0
-                return float(y_bottom + line_height)
+                accumulated_area += band_area
 
-            accumulated_area += band_area
+            # Process all events at curr_y
+            while i < len(events) and events[i][0] == curr_y:
+                _, event_type, l = events[i]
+                if event_type == 0:  # Square starts
+                    active_widths[l] += 1
+                else:  # Square ends
+                    active_widths[l] -= 1
+                    if active_widths[l] == 0:
+                        del active_widths[l]
+                i += 1
 
-        return float(y_coords[-1])  # Fallback
+            prev_y = curr_y
+
+        return float(prev_y)
 
 
 # Test cases:
