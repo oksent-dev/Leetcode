@@ -57,11 +57,9 @@ if __name__ == "__main__":
     m1, n1 = 4, 3
     hfences1 = [2, 3]
     vfences1 = [2]
-    print(solution.maximizeSquareArea(m1, n1, hfences1, vfences1))  # Expected output: 4
+    print(solution.maximizeSquareArea(m1, n1, hfences1, vfences1))  # Output: 4
 
     m2, n2 = 6, 7
     hfences2 = [2]
     vfences2 = [4]
-    print(
-        solution.maximizeSquareArea(m2, n2, hfences2, vfences2)
-    )  # Expected output: -1
+    print(solution.maximizeSquareArea(m2, n2, hfences2, vfences2))  # Output: -1
